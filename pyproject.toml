@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seo-autopilot"
+version = "1.0.0"
+description = "Automate the slowest SEO jobs: technical audits, keyword clustering, migration redirect maps and Search Console quick wins."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Meer Hamza", email = "meerhamza5@gmail.com" }]
+requires-python = ">=3.10"
+dependencies = ["requests>=2.28", "beautifulsoup4>=4.11", "pandas>=1.5", "openpyxl>=3.1", "click>=8.1"]
+keywords = ["seo", "technical-seo", "keyword-clustering", "redirects", "google-search-console", "automation"]
+
+[project.urls]
+Homepage = "https://github.com/marketing-MEER/seo-autopilot"
+LinkedIn = "https://www.linkedin.com/in/meerhamza-seo"
+
+[project.scripts]
+seo-autopilot = "seo_autopilot.cli:main"
+
+[tool.setuptools]
+packages = ["seo_autopilot"]
