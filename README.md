@@ -12,7 +12,7 @@ Technical audits · Keyword clustering · Migration redirect maps · Search Cons
 ![No API keys](https://img.shields.io/badge/API%20keys-none%20needed-brightgreen)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Meer%20Hamza-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/meerhamza-seo)
 
-[🚀 Quick start](#-quick-start) · [🧰 The tools](#-the-tools) · [🤖 Claude skills](#-claude-code-skills-ai-layer) · [❓ FAQ](#-faq) · [👤 Author](#-author)
+[🚀 Quick start](#quick-start) · [🧰 The tools](#tools) · [🤖 Claude skills](#claude-skills) · [❓ FAQ](#faq) · [👤 Author](#author)
 
 </div>
 
@@ -32,6 +32,8 @@ Every SEO team repeats the same spreadsheet work every week:
 ✅ **Free and MIT licensed**   ✅ **No API keys or subscriptions**   ✅ **Works with the exports you already have** (Ahrefs, Semrush, Google Search Console, sitemaps)
 
 ---
+
+<a id="quick-start"></a>
 
 ## 🚀 Quick start
 
@@ -56,16 +58,20 @@ seo-workhorse audit https://books.toscrape.com --max-pages 15
 
 ---
 
+<a id="tools"></a>
+
 ## 🧰 The tools
 
 | | Tool | Replaces this manual job | You get |
 |---|---|---|---|
-| 🔍 | [`audit`](#-audit--technical-seo-crawler) | Checking pages one by one for technical issues | Every issue, ranked by priority |
-| 🗂️ | [`cluster`](#️-cluster--keyword-clustering) | Grouping keywords into topics in a spreadsheet | Topic clusters + search intent |
-| 🔀 | [`redirects`](#-redirects--migration-redirect-mapper) | Matching old and new URLs before a migration | 301 map + `.htaccess` + nginx rules |
-| 📈 | [`gsc`](#-gsc--search-console-quick-wins--content-decay) | Filtering GSC exports for opportunities | Quick wins, CTR gaps, decaying pages |
+| 🔍 | [`audit`](#audit) | Checking pages one by one for technical issues | Every issue, ranked by priority |
+| 🗂️ | [`cluster`](#cluster) | Grouping keywords into topics in a spreadsheet | Topic clusters + search intent |
+| 🔀 | [`redirects`](#redirects) | Matching old and new URLs before a migration | 301 map + `.htaccess` + nginx rules |
+| 📈 | [`gsc`](#gsc) | Filtering GSC exports for opportunities | Quick wins, CTR gaps, decaying pages |
 
 ---
+
+<a id="audit"></a>
 
 ### 🔍 `audit` · Technical SEO crawler
 
@@ -111,6 +117,8 @@ seo-workhorse audit https://www.example.com --max-pages 500 -o audit.xlsx
 > The crawler stays on the same domain, respects `robots.txt` and identifies itself with its own user agent. Only crawl sites you own or have permission to audit.
 
 ---
+
+<a id="cluster"></a>
 
 ### 🗂️ `cluster` · Keyword clustering
 
@@ -158,6 +166,8 @@ seo-workhorse cluster keywords.csv -o clusters.xlsx
 > Clustering compares the words in each keyword, not live Google results. Synonyms like "what is seo" and "seo meaning" can end up in separate clusters, so check the biggest clusters before you plan content around them.
 
 ---
+
+<a id="redirects"></a>
 
 ### 🔀 `redirects` · Migration redirect mapper
 
@@ -212,6 +222,8 @@ Redirect 301 /contact.php https://new-site.com/contact/
 
 ---
 
+<a id="gsc"></a>
+
 ### 📈 `gsc` · Search Console quick wins & content decay
 
 Reads a Google Search Console export and finds the pages where a small fix brings the most clicks.
@@ -263,6 +275,8 @@ seo-workhorse gsc pages_last_3_months.csv --previous pages_previous_3_months.csv
 > Expected CTR per position is based on typical industry averages (about 28% at #1 down to about 2.4% at #10). It's a benchmark for spotting outliers, not an exact forecast.
 
 ---
+
+<a id="claude-skills"></a>
 
 ## 🤖 Claude Code skills (AI layer)
 
@@ -328,6 +342,8 @@ Got an idea? [Open an issue](https://github.com/marketing-MEER/seo-workhorse/iss
 
 ---
 
+<a id="faq"></a>
+
 ## ❓ FAQ
 
 <details>
@@ -379,6 +395,8 @@ Issues and pull requests are welcome, especially new checks, export formats and 
 [MIT](LICENSE). Free for personal and commercial use.
 
 ---
+
+<a id="author"></a>
 
 ## 👤 Author
 
