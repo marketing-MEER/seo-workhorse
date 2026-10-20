@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 
 from .report import find_column
 
-USER_AGENT = "seo-workhorse/1.0 (+https://github.com/meer5-seo/seo-workhorse)"
+USER_AGENT = "seo-workhorse/1.0 (+https://github.com/marketing-MEER/seo-workhorse)"
 NOISE = {"html", "htm", "php", "aspx", "index", "www", "en", "de", "page", "p",
          "a", "an", "the", "and", "or", "of", "to", "in", "for", "is", "what", "how", "why", "us"}
 

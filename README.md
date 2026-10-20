@@ -8,7 +8,7 @@ Technical audits, keyword clustering, migration redirect maps and Search Console
 - Works with the exports you already have (Ahrefs, Semrush, Google Search Console, Screaming Frog, sitemaps)
 - Includes Claude Code skills that turn the reports into rewritten metas, content briefs and a 30-day action plan
 
-[![tests](https://github.com/meer5-seo/seo-workhorse/actions/workflows/ci.yml/badge.svg)](https://github.com/meer5-seo/seo-workhorse/actions/workflows/ci.yml)
+[![tests](https://github.com/marketing-MEER/seo-workhorse/actions/workflows/ci.yml/badge.svg)](https://github.com/marketing-MEER/seo-workhorse/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
@@ -26,7 +26,7 @@ Technical audits, keyword clustering, migration redirect maps and Search Console
 ## Install
 
 ```bash
-git clone https://github.com/meer5-seo/seo-workhorse.git
+git clone https://github.com/marketing-MEER/seo-workhorse.git
 cd seo-workhorse
 pip install -e .
 ```

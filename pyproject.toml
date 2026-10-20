@@ -14,7 +14,7 @@ dependencies = ["requests>=2.28", "beautifulsoup4>=4.11", "pandas>=1.5", "openpy
 keywords = ["seo", "technical-seo", "keyword-clustering", "redirects", "google-search-console", "automation"]
 
 [project.urls]
-Homepage = "https://github.com/meer5-seo/seo-workhorse"
+Homepage = "https://github.com/marketing-MEER/seo-workhorse"
 LinkedIn = "https://www.linkedin.com/in/meerhamza-seo"
 
 [project.scripts]
