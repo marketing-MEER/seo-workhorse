@@ -1,14 +1,14 @@
-# seo-autopilot
+# seo-workhorse
 
 **Free, open-source automation for the SEO jobs that eat your week.**
 
-Technical audits, keyword clustering, migration redirect maps and Search Console analysis are some of the most repetitive tasks in SEO. Most teams still do them by hand in spreadsheets, every week. `seo-autopilot` does each one with a single command and gives you a clean Excel report.
+Technical audits, keyword clustering, migration redirect maps and Search Console analysis are some of the most repetitive tasks in SEO. Most teams still do them by hand in spreadsheets, every week. `seo-workhorse` does each one with a single command and gives you a clean Excel report.
 
 - No paid APIs, no API keys, no subscriptions
 - Works with the exports you already have (Ahrefs, Semrush, Google Search Console, Screaming Frog, sitemaps)
 - Includes Claude Code skills that turn the reports into rewritten metas, content briefs and a 30-day action plan
 
-[![tests](https://github.com/marketing-MEER/seo-autopilot/actions/workflows/ci.yml/badge.svg)](https://github.com/marketing-MEER/seo-autopilot/actions/workflows/ci.yml)
+[![tests](https://github.com/meer5-seo/seo-workhorse/actions/workflows/ci.yml/badge.svg)](https://github.com/meer5-seo/seo-workhorse/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
@@ -18,16 +18,16 @@ Technical audits, keyword clustering, migration redirect maps and Search Console
 
 | Command | The manual job it replaces | What you get |
 |---|---|---|
-| `seo-autopilot audit` | Clicking through a site, checking titles, metas, H1s, canonicals, broken links and redirects page by page | Excel with a summary, every issue ranked by priority, broken links with the page that links to them, and a full page list |
-| `seo-autopilot cluster` | Sorting hundreds of keywords into topics in a spreadsheet | Topic clusters named after their biggest keyword, total volume per cluster and the search intent of every keyword |
-| `seo-autopilot redirects` | Matching old URLs to new URLs one by one before a migration | A 301 map with a confidence score, a "needs review" list, and ready-to-paste `.htaccess` and nginx rules |
-| `seo-autopilot gsc` | Filtering GSC exports for pages that are close to ranking, under-clicked or losing traffic | Quick wins (positions 4–20), CTR gaps on page 1, and content decay with the likely cause |
+| `seo-workhorse audit` | Clicking through a site, checking titles, metas, H1s, canonicals, broken links and redirects page by page | Excel with a summary, every issue ranked by priority, broken links with the page that links to them, and a full page list |
+| `seo-workhorse cluster` | Sorting hundreds of keywords into topics in a spreadsheet | Topic clusters named after their biggest keyword, total volume per cluster and the search intent of every keyword |
+| `seo-workhorse redirects` | Matching old URLs to new URLs one by one before a migration | A 301 map with a confidence score, a "needs review" list, and ready-to-paste `.htaccess` and nginx rules |
+| `seo-workhorse gsc` | Filtering GSC exports for pages that are close to ranking, under-clicked or losing traffic | Quick wins (positions 4–20), CTR gaps on page 1, and content decay with the likely cause |
 
 ## Install
 
 ```bash
-git clone https://github.com/marketing-MEER/seo-autopilot.git
-cd seo-autopilot
+git clone https://github.com/meer5-seo/seo-workhorse.git
+cd seo-workhorse
 pip install -e .
 ```
 
@@ -37,27 +37,27 @@ Requires Python 3.10+. Try it on the sample data in `examples/` first.
 
 ### 1. Technical SEO audit
 ```bash
-seo-autopilot audit https://www.example.com --max-pages 500 -o audit.xlsx
+seo-workhorse audit https://www.example.com --max-pages 500 -o audit.xlsx
 ```
 Crawls the site (same domain only, respects `robots.txt`, waits between requests) and flags:
 HTTP 4xx/5xx · redirect chains · missing, duplicate, too long or too short titles and meta descriptions · missing or multiple H1s · missing or cross-pointing canonicals · noindex · thin content · images without alt text · broken internal links with their source page.
 
 ### 2. Keyword clustering
 ```bash
-seo-autopilot cluster examples/keywords.csv -o clusters.xlsx
+seo-workhorse cluster examples/keywords.csv -o clusters.xlsx
 ```
 Reads any keyword CSV: it finds the keyword and volume columns of Ahrefs, Semrush or GSC exports by itself. `--threshold 0.6` gives tighter clusters, `0.4` looser ones.
 
 ### 3. Migration redirect map
 ```bash
-seo-autopilot redirects https://old-site.com/sitemap.xml new_urls.csv -o redirect_map.xlsx
+seo-workhorse redirects https://old-site.com/sitemap.xml new_urls.csv -o redirect_map.xlsx
 ```
 Both inputs can be a sitemap URL, an `.xml` file, a `.csv` with a URL column or a `.txt` with one URL per line. Matching uses the URL path, the slug words and, with `--use-titles`, the page titles. A URL with no good match goes to its closest parent folder (never the homepage by default) and is flagged for review.
 Output: `redirect_map.xlsx`, `redirect_map.htaccess`, `redirect_map.nginx.conf`.
 
 ### 4. Search Console quick wins and content decay
 ```bash
-seo-autopilot gsc pages_last_3_months.csv --previous pages_previous_3_months.csv -o gsc.xlsx
+seo-workhorse gsc pages_last_3_months.csv --previous pages_previous_3_months.csv -o gsc.xlsx
 ```
 Export the **Pages** or **Queries** table from GSC → Performance as CSV. Add `--previous` with an export from an earlier period to find decaying pages.
 

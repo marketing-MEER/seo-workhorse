@@ -1,6 +1,6 @@
 ---
 name: seo-quickwin-plan
-description: Turns `seo-autopilot gsc` output (quick wins, CTR gaps, content decay) into a prioritised 30-day SEO action plan with a concrete task for every page. Use when the user says "what should I fix first", "make an action plan from GSC", "prioritise my quick wins", or hands over gsc_opportunities.xlsx.
+description: Turns `seo-workhorse gsc` output (quick wins, CTR gaps, content decay) into a prioritised 30-day SEO action plan with a concrete task for every page. Use when the user says "what should I fix first", "make an action plan from GSC", "prioritise my quick wins", or hands over gsc_opportunities.xlsx.
 ---
 
 # GSC quick wins → 30-day action plan

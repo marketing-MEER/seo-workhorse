@@ -1,6 +1,6 @@
 ---
 name: seo-cluster-brief
-description: Turns keyword clusters from `seo-autopilot cluster` into content briefs (one page per cluster) with a target keyword, search intent, H2 outline, FAQs and internal links. Use when the user says "write briefs for my clusters", "content plan from keyword_clusters.xlsx", or "what pages should I create".
+description: Turns keyword clusters from `seo-workhorse cluster` into content briefs (one page per cluster) with a target keyword, search intent, H2 outline, FAQs and internal links. Use when the user says "write briefs for my clusters", "content plan from keyword_clusters.xlsx", or "what pages should I create".
 ---
 
 # Cluster → content brief

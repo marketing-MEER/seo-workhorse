@@ -13,7 +13,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-USER_AGENT = "seo-autopilot/1.0 (+https://github.com/marketing-MEER/seo-autopilot)"
+USER_AGENT = "seo-workhorse/1.0 (+https://github.com/meer5-seo/seo-workhorse)"
 SKIP_EXT = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".pdf", ".zip", ".mp4", ".mp3", ".css", ".js", ".ico", ".xml")
 
 TITLE_MIN, TITLE_MAX = 30, 60

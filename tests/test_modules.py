@@ -5,8 +5,8 @@ import threading
 import unittest
 from pathlib import Path
 
-from seo_autopilot import audit, cluster, gsc, redirects
-from seo_autopilot.report import write_report
+from seo_workhorse import audit, cluster, gsc, redirects
+from seo_workhorse.report import write_report
 
 HERE = Path(__file__).parent
 EXAMPLES = HERE.parent / "examples"

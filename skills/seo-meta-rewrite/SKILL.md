@@ -1,6 +1,6 @@
 ---
 name: seo-meta-rewrite
-description: Rewrites the titles and meta descriptions that `seo-autopilot audit` or `seo-autopilot gsc` flagged (missing, duplicate, too long, too short, or low CTR). Use when the user says "fix my titles", "rewrite metas from the audit", "write new meta descriptions", or hands over seo_audit.xlsx / gsc_opportunities.xlsx.
+description: Rewrites the titles and meta descriptions that `seo-workhorse audit` or `seo-workhorse gsc` flagged (missing, duplicate, too long, too short, or low CTR). Use when the user says "fix my titles", "rewrite metas from the audit", "write new meta descriptions", or hands over seo_audit.xlsx / gsc_opportunities.xlsx.
 ---
 
 # SEO meta rewrite

@@ -1,4 +1,4 @@
-"""Command line entry point: `seo-autopilot <command>`."""
+"""Command line entry point: `seo-workhorse <command>`."""
 from pathlib import Path
 
 import click
@@ -16,7 +16,7 @@ def _done(path: Path, sheets: dict):
 @click.group()
 @click.version_option(__version__)
 def main():
-    """seo-autopilot: automate the slowest weekly SEO jobs.
+    """seo-workhorse: automate the slowest weekly SEO jobs.
 
     Built by Meer Hamza - linkedin.com/in/meerhamza-seo
     """
